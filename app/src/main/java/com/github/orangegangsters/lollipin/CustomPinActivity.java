@@ -43,11 +43,12 @@ public class CustomPinActivity extends AppLockActivity {
         builder.positiveButtonTextSize((int) res.getDimension(R.dimen.activity_dialog_positive_button_size));
         builder.negativeButtonTextSize((int) res.getDimension(R.dimen.activity_dialog_negative_button_size));
 
-        //Build the dialog.
+        //Build the dialog.对话框
         CustomDialog customDialog = builder.build();
         customDialog.setCanceledOnTouchOutside(false);
         customDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        customDialog.setClickListener(new CustomDialog.ClickListener() {
+        customDialog.setClickListener(new CustomDialog.ClickListener() {/*对话框设置监听*/
+
             @Override
             public void onConfirmClick() {
                 Toast.makeText(getApplicationContext(), "Yes", Toast.LENGTH_SHORT).show();
